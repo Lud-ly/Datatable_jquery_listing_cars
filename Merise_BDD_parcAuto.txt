@@ -1,0 +1,149 @@
+DONNEES BRUTES:
+
+-Référence voiture
+-Anneé voiture
+-Marque voiture
+-Modèle voiture
+-Motorisation voiture
+-Puissance voiture
+
+-Noms, prénoms,adresse,téléphone,email des clients
+
+   
+   
+ENTITE 1(voiture):
+
+   Marque
+   Modèle
+   Date de sortie
+   Motorisation
+   Puissance
+   
+ENTITE 2(Client):
+
+   Nom client
+   Prénom client
+   Rue client
+   Code postal client
+   ville client 
+   Mobile client
+   Email client  
+  
+ENTITE 3(location):
+
+  Date location
+  Delai location  
+  
+  
+   
+ REGLE DE GESTION METIER :
+ 
+ 
+	-> Une Marque contient plusieurs modéles
+	->Un modèle est dans une seule marque
+	->Un client peut louer un et un seul modèle
+	->Un modèle peut etre louer par 1 à plusieur clients
+	
+	
+DICTIONNAIRE DE DONNEES:	
+	
+	
+	
+	ENTITE             CODE MNEMONIQUE            DESIGNATION              TYPES DE DONNEES          TAILLES              REMARQUES
+	
+	
+											
+	
+    voiture(marque)        Id_voiture            Identifiant unique            Numérique                 11               En auto-incrémentation
+					            de la voiture
+	
+	
+	                    Marque_Voiture           Nom de la marque           Alphanumérique             50                     fixe
+	
+	
+	
+	                    Modele_Voiture             Nom du modéle             Alphanumérique             50                     fixe    
+	
+	
+			   Date_Sortie_Voiture          Date de sortie            Date                                          Aaaa-mm-jj   
+	                                                de la voiture
+	
+	
+	
+	                  Motorisation_voiture        Type de motorisation       Alphanumérique              50                   fixe
+	                                                 de la voiture
+	
+	
+	                   Puissance_voiture          Puissance de la             Numérique                   11                  fixe
+					                                          voiture
+									 				 
+													 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------													 
+													 
+  client(loueur)		Id_client			Identifiant unique du			Numérique		  11        En auto-incrémentation
+							          client
+													 
+													 
+				Nom_client			  Nom du client		                Alphanumérique             30                   fixe
+													 
+													 
+													 
+				Prenom_client			  Prénom du client		       Alphanumérique             30                    fixe							 
+						
+                        
+				Rue_client			Rue du client	                        Alphanumérique             50                    fixe		
+
+                   
+				 cp_client		       Code postal du client		       Alphanumérique             10                     fixe	
+						
+
+                               Ville_client			  Ville du client		       Alphanumérique             50                     fixe	
+						
+
+                               tel_client		      Téléphone du client		        Numérique                 15                   fixe			
+
+						
+			     email_client                    Email du client                       Alphanumérique              50                    fixe
+						
+--------------------------------------------------------------------------------------------------------------------------------------------------------------						
+						
+						
+   location             Id_location          identifiant numérique           Numérique                11                En auto-incrémentation
+	                                           de la location
+											   
+		        Date_location	     Date de la location	     Date                                              Aaaa-mm-jj
+						
+						
+		        Delai_location          Délai autorisé de             Numérique                   3                 S'exprime en nombre
+					     la location                                                                 de jours
+                                                
+												
+					   Etat si la location                                                              0:location en cours
+					   est terminé ou non                Booléan                                        1:location terminé
+												
+												
+	----------------------------------------------------------------------------------------------------------------------------------------------------							
+						
+						
+DEPENDANCES FONCTIONNELLES:
+
+
+
+					Id_voiture -> Marque_Voiture, Modele_Voiture, Date_Sortie_Voiture, Motorisation_voiture, Puissance_voiture 		
+						
+						
+					Id_client -> Nom_client, Prenom_client, Rue_client, cp_client, Ville_client, tel_client, email_client	
+						
+						
+					Id_location -> Date_location, Delai_location, Id_client, Id_voiture	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						

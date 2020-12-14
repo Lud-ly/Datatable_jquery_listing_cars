@@ -14,6 +14,7 @@ function constructTable() {
     sHTML += "</tr>";
     sHTML += "</thead>";
     sHTML += "<tbody>";
+    
 
     for (i = 0; i < aOfCars.length; i++) {
         sHTML += "<tr>";
