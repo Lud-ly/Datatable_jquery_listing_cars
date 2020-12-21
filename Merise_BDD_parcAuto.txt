@@ -97,10 +97,10 @@ DICTIONNAIRE DE DONNEES:
 				 cp_client		       Code postal du client		       Alphanumérique             10                     fixe	
 						
 
-                               Ville_client			  Ville du client		       Alphanumérique             50                     fixe	
+                Ville_client			  Ville du client		       Alphanumérique             50                     fixe	
 						
 
-                               tel_client		      Téléphone du client		        Numérique                 15                   fixe			
+                 tel_client		      Téléphone du client		        Numérique                 15                   fixe			
 
 						
 			     email_client                    Email du client                       Alphanumérique              50                    fixe
